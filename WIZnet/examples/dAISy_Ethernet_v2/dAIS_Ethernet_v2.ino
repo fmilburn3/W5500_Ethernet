@@ -2,15 +2,15 @@
   Receives data from dAISy and forwards it to MarineTraffic using a TI F5529 LP with a WIZnet
   ioShield-L and Energia.
   
-  If a connection cannot be made with MarineTraffic the red LED will flash regularly and rapidly.  If
-  a connection is made the red LED will flash whenever a valid message is received from dAISy and
-  transmitted to MarineTraffic.
+  If the Ethernet cannot be configured the red LED will flash regularly and rapidly.  If a connection
+  is made the red LED will flash whenever a valid message is received from dAISy and transmitted to
+  MarineTraffic.
 
   Tested with:
   dAISy            ioShield-L LaunchPad   Energia         Comments
   --------------   --------------------   -------------   -------------------------------------------
   F5529/BackPack   MSP-430F5529           v17 
-  
+  dAISy            MSP-430F5529           v17
   
   Notes:
   1) You must enable the auxiliary serial output from the dAISy debug menu for this sketch
@@ -21,7 +21,7 @@
   3) There is not enough memory on the G2553 for this sketch to work.
   
   Connections: 
-  F5529/dAISy BP          MSP430F5529       
+  dAISy                   MSP430F5529       
   --------------          --------------   
   P4.4 (TX)               Pin 3 RX(1)
   GND                     GND                   
@@ -37,8 +37,8 @@
 #define DEBUG 1                                // make DEBUG 0 to turn off extra print
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };  // Your ethernet MAC
-byte server[] = { 5, 9, 207, 224 };            // Marine Traffic IP   
-int  serverPort = 6050;                        // User's port at Marine Traffic
+byte server[] = { xxx, xxx, xxx, xxx };            // Marine Traffic IP   
+int  serverPort = xxxx;                        // User's port at Marine Traffic
 
 char nmea[MAXLEN];                             // holds incoming NMEA sentences   
 int blinkSentence = 0;                         // toggles RED_LED when sentences are sent
