@@ -6,3 +6,4 @@ Library is currently under development and not for use.  Based on the library by
 Tested with the following hardware:
 
 Ethernet: WIZnet ioShield-L on Texas Instruments MSP-EXP430F5529LP
+          WIZnet ioShield-L on custom TI MSP430G2955 board
