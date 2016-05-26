@@ -63,7 +63,7 @@
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };  // Your ethernet MAC
 byte server[] = { 5, 9, 207, 224 };            // Marine Traffic IP   
-int  serverPort = 6050;                        // User's port at Marine Traffic
+int  serverPort = xxxx;                        // User's port at Marine Traffic
 
 char nmea[MAXLEN];                             // holds incoming NMEA sentences   
 int blinkSentence = 0;                         // toggles RED_LED when sentences are sent
